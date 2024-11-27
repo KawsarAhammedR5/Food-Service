@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+/* common style */
+body{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.primary-button{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 8px;
+    background: #FFCB66;
+}
+/* navbar style */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 100px;
+}
+.logo{
+    padding-top: 4px;
+}
+.list-menu{
+    display: flex;
+    align-items: center;
+}
+.list-menu > ul{
+    display: flex;
+    text-decoration: none;
+}
+ul li, a{
+    display: flex;
+    text-decoration: none;
+    margin-right: 1em;
+    color: #21203C;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* banner style */
+.banner{
+    background-size: cover;
+    padding: 100px 0;
+    background: #FFCB66;
+    display: flex;
+    flex-direction: column;
+}
+.banner-heading{
+    color: #160041;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 800;
+    justify-content: center;
+    padding: 0 100px;
+}
+.banner-description{
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 40px 290px;
+}
+.searchbar{
+    margin-top: 40px;
+    text-align: center;
+}
+::placeholder{
+    color: #8A8A9B;
+    font-size: 18px;
+    font-weight: 600;
+}
+.searchbar > input{
+    padding: 30px 300px;
+    border: 0;
+    border-radius: 16px;
+    background: #FFF;
+    outline: none;
+    box-shadow: 10px 20px 24px 0px rgba(75, 75, 75, 0.05);
+}
+#search{
+    margin-left: -125px;
+    padding: 15px 25px;
+}
+/* responsive small device */
+@media screen and (max-width:576px){
+    .primary-button{
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 15px;
+        border: 0;
+        border-radius: 8px;
+        background: #FFCB66;
+    }
+    .navbar{
+    margin: 20px 30px;
+    }
+    .list-menu{
+        display: none;
+    }
+    .banner-heading{
+        font-size: 36px;
+        padding: 0 10px;
+    }
+    .banner-description{
+        font-size: 16px;
+        padding: 20px 20px;
+    }
+    .searchbar > input{
+        padding: 20px 100px;;
+    }
+}
+@media screen and (min-width:576px) and (max-width:992px) {
+    .primary-button{
+        font-size: 16px;
+        font-weight: 600;
+        padding: 7px 20px;
+        border: 0;
+        border-radius: 8px;
+        background: #FFCB66;
+    }
+    .navbar{
+    margin: 20px 30px;
+    }
+    .list-menu ul{
+        display: none;
+    }
+    .banner-heading{
+        font-size: 36px;
+        padding: 0 10px;
+    }
+    .banner-description{
+        font-size: 16px;
+        padding: 20px 20px;
+    }
+    .searchbar > input{
+        padding: 20px 200px;;
+    }
+}
