@@ -25,7 +25,6 @@ body{
     color: #160041;
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: .7em;
 }
 .sub-heading{
     color: #160041;
@@ -109,7 +108,7 @@ ul li, a{
     padding: 15px 25px;
 }
 /* home service style */
-section{
+.home-service-to-you{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,6 +121,7 @@ section{
 .home-service img{
     width: 100%;
     border-radius: 20px;
+    margin-top: 1em;
 }
 .service-container{
     display: grid;
@@ -133,23 +133,109 @@ section{
 }
 /* user-friendly style */
 .user-friendly{
+    text-align: center;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin: 100px 70px;
 }
 .user-friendly-container{
     display: flex;
     justify-content: center;
     text-align: center;
     gap: 0 20px;
+    margin-top: 1em;
 }
 .container-number{
     color: #FFCB66;
     font-size: 48px;
     font-weight: 800;
 }
-
-
+/* popular discount style */
+.popular-discount{
+    margin: 100px 70px;
+}
+.section-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.countdown{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.countdown > p{
+    color: #8A8A9B;
+    font-size: 24px;
+    font-weight: 400;
+}
+.countdown p span{
+    color: #F8B948;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 5px 0 10px;
+}
+/* popular discount style burger chart*/
+.discount-container{
+    margin-top: 5em;
+    display: flex;
+    gap: 20px;
+}
+.discount-item{
+    width: 49%;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 10px 20px 24px 0px rgba(0, 0, 0, 0.05);
+}
+.discount-item img{
+    width: 100%;
+    border-radius: 20px;
+}
+.discount-info{
+    padding: 3em 4em;
+}
+.food-name{
+    color: #433A2A;
+    font-size: 31px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+.price-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2em;
+    margin-top: 2em;
+}
+.discount-price{
+    color: #F8B948;
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+.regular-price{
+    color: rgba(248, 185, 72, 0.20);
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+.order-now{
+    margin-left: 18px;
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 20.5px;
+    background: #F8B948;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
 
 
 
@@ -175,6 +261,15 @@ section{
 
 /* responsive small device */
 @media screen and (max-width:576px){
+    .home-service-to-you, .user-friendly-container{
+        flex-direction: column;
+    }
+    .home-service{
+        width: 100%;
+    }
+    .home-service-to-you, .user-friendly{
+        margin: 100px 20px;
+    }
     .primary-button{
         font-size: 16px;
         font-weight: 600;
@@ -183,13 +278,21 @@ section{
         border-radius: 8px;
         background: #FFCB66;
     }
+    .service-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
     .navbar{
     margin: 20px 30px;
     }
     .list-menu{
         display: none;
     }
-    .banner-heading{
+    .banner-heading, .section-heading{
         font-size: 36px;
         padding: 0 10px;
     }
@@ -209,6 +312,23 @@ section{
         border: 0;
         border-radius: 8px;
         background: #FFCB66;
+    }
+    .home-service-to-you, .user-friendly-container{
+        flex-direction: column;
+    }
+    .home-service{
+        width: 100%;
+    }
+    .home-service-to-you, .user-friendly{
+        margin: 100px 30px;
+    }
+    .service-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
     }
     .navbar{
     margin: 20px 30px;
