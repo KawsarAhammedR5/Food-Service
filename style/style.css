@@ -90,13 +90,11 @@ ul li, a{
     margin-top: 40px;
     text-align: center;
 }
-::placeholder{
+.searchbar > input{
     color: #8A8A9B;
     font-size: 18px;
     font-weight: 600;
-}
-.searchbar > input{
-    padding: 30px 300px;
+    padding: 30px 500px 30px 30px;
     border: 0;
     border-radius: 16px;
     background: #FFF;
@@ -225,7 +223,7 @@ ul li, a{
     line-height: normal;
     letter-spacing: 0.5px;
 }
-.order-now{
+.buy-button{
     margin-left: 18px;
     border: 0;
     padding: 10px 18px;
@@ -235,6 +233,50 @@ ul li, a{
     text-align: center;
     font-size: 14px;
     font-weight: 700;
+}
+/* food list for you style */
+.food-list-for-you{
+    margin: 100px 70px;
+}
+.search-bar{
+    border: 0;
+    border-radius: 28px;
+    background: #ffffff;
+    box-shadow: 10px 20px 24px 0px rgba(75, 75, 75, 0.05);
+    color: #8A8A9B;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 15px 250px 15px 25px;
+    outline: none;
+}
+.search-option > select{
+    border-radius: 28px;
+    background: #FFCB66;
+    padding: 15px 40px 15px 50px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    border: 0;
+}
+.food-list-container{
+    margin: 4em 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.food-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.food-item img{
+    width: 100%;
+    border-radius: 193px;
+    margin: 20px 0;
+}
+.stars{
+    color:#FFCB66;
 }
 
 
@@ -261,14 +303,17 @@ ul li, a{
 
 /* responsive small device */
 @media screen and (max-width:576px){
-    .home-service-to-you, .user-friendly-container{
+    .home-service-to-you, .user-friendly-container, .discount-container, .section-head{
         flex-direction: column;
     }
-    .home-service{
+    .home-service, .discount-item{
         width: 100%;
     }
-    .home-service-to-you, .user-friendly{
+    .home-service-to-you, .user-friendly, .popular-discount, .food-list-for-you{
         margin: 100px 20px;
+    }
+    .section-heading{
+
     }
     .primary-button{
         font-size: 16px;
@@ -295,6 +340,7 @@ ul li, a{
     .banner-heading, .section-heading{
         font-size: 36px;
         padding: 0 10px;
+        margin-bottom: 20px;
     }
     .banner-description{
         font-size: 16px;
@@ -303,9 +349,22 @@ ul li, a{
     .searchbar > input{
         padding: 20px 100px;;
     }
+    .food-list-container{
+        grid-template-columns: repeat(1,1fr);
+        gap: 40px;
+    }
+    .search-bar{
+        padding: 10px 50px 10px 20px;
+        font-size: 16px;
+    }
+    .search-option > select{
+        padding: 10px 0 10px 20px;
+        font-size: 16px;
+    }
 }
+/* for medium device  */
 @media screen and (min-width:576px) and (max-width:992px) {
-    .primary-button{
+    .primary-button, .buy-button{
         font-size: 16px;
         font-weight: 600;
         padding: 7px 20px;
@@ -313,14 +372,18 @@ ul li, a{
         border-radius: 8px;
         background: #FFCB66;
     }
-    .home-service-to-you, .user-friendly-container{
+    .home-service-to-you, .user-friendly-container, .discount-container, .section-head{
         flex-direction: column;
     }
-    .home-service{
+    .home-service, .discount-item{
         width: 100%;
     }
     .home-service-to-you, .user-friendly{
         margin: 100px 30px;
+    }
+    .section-heading{
+        padding: 0 10px;
+        margin-bottom: 20px;
     }
     .service-container{
         display: grid;
@@ -346,5 +409,9 @@ ul li, a{
     }
     .searchbar > input{
         padding: 20px 200px;;
+    }
+    .food-list-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 40px;
     }
 }
