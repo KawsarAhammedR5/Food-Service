@@ -259,6 +259,15 @@ ul li, a{
     outline: none;
     border: 0;
 }
+.search-option label > i{
+    position: absolute;
+}
+.search-icon{
+    padding: .8em .8em .8em 18em;
+    color: #FFCB66;
+    font-size: 1.5rem;
+    text-align: center;
+}
 .food-list-container{
     margin: 4em 0;
     display: grid;
@@ -268,7 +277,7 @@ ul li, a{
 .food-item{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .food-item img{
     width: 100%;
@@ -277,6 +286,61 @@ ul li, a{
 }
 .stars{
     color:#FFCB66;
+}
+/* Express Delivery style */
+.express-delivery{
+    margin: 100px 70px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: end;
+}
+.express-delivery-part > img{
+    width: 100%;
+    border-radius: 20px;
+}
+.express-delivery-part{
+    width: calc((100% - 10px)/2);
+    margin-top: 25px;
+}
+.form-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: #f8f6f6;
+    padding: 60px 0px;
+}
+.form-container label > i{
+    position: absolute;
+}
+.icon{
+    margin: 5px;
+    padding: 1em 3.2em;
+    color: #FFCB66;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.form-container label input{
+    border-radius: 10px;
+    background: #FFF;
+    color: #8A8A9B;
+    font-size: 18px;
+    font-weight: 400;
+    padding: .8em 4em;
+    margin: .7em 3em;
+}
+.recharge-now{
+    margin: .5em 3.5em;
+    width: 30%;
+    border: 0;
+    padding: 18px 10px;
+    border-radius: 20.5px;
+    background: #F8B948;
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
 }
 
 
@@ -306,14 +370,11 @@ ul li, a{
     .home-service-to-you, .user-friendly-container, .discount-container, .section-head{
         flex-direction: column;
     }
-    .home-service, .discount-item{
+    .home-service, .discount-item, .express-delivery-part{
         width: 100%;
     }
-    .home-service-to-you, .user-friendly, .popular-discount, .food-list-for-you{
+    .home-service-to-you, .user-friendly, .popular-discount, .food-list-for-you, .express-delivery{
         margin: 100px 20px;
-    }
-    .section-heading{
-
     }
     .primary-button{
         font-size: 16px;
@@ -349,6 +410,9 @@ ul li, a{
     .searchbar > input{
         padding: 20px 100px;;
     }
+    .discount-info{
+        padding: 1.5em 2em;
+    }
     .food-list-container{
         grid-template-columns: repeat(1,1fr);
         gap: 40px;
@@ -361,6 +425,23 @@ ul li, a{
         padding: 10px 0 10px 20px;
         font-size: 16px;
     }
+    .search-icon{
+        padding: .5em .8em .5em 9em;
+    }
+    .express-delivery{
+        flex-direction: column;
+    }
+    .countdown > p span{
+        font-size: 26px;
+    }
+    .form-container label input{
+        padding: .8em 2.5em;
+        margin: .7em 3em;
+    }
+    .recharge-now{
+        width: 40%;
+    }
+    
 }
 /* for medium device  */
 @media screen and (min-width:576px) and (max-width:992px) {
@@ -372,10 +453,10 @@ ul li, a{
         border-radius: 8px;
         background: #FFCB66;
     }
-    .home-service-to-you, .user-friendly-container, .discount-container, .section-head{
+    .home-service-to-you, .user-friendly-container, .discount-container, .section-head, .express-delivery{
         flex-direction: column;
     }
-    .home-service, .discount-item{
+    .home-service, .discount-item, .express-delivery-part{
         width: 100%;
     }
     .home-service-to-you, .user-friendly{
@@ -413,5 +494,8 @@ ul li, a{
     .food-list-container{
         grid-template-columns: repeat(2,1fr);
         gap: 40px;
+    }
+    .form-container label input{
+        padding: .8em 10em .8em 5em;
     }
 }
